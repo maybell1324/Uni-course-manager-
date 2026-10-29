@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Quicksand:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#22123e", "on-surface-variant": "#49454e", "surface-tint": "#675686", "outline": "#7a757f", "tertiary-container": "#8f6667", "secondary-container": "#dfccfe", "primary-fixed": "#ebdcff", "on-secondary": "#ffffff", "tertiary-fixed-dim": "#ecbaba", "surface-container": "#f4ede6", "surface-variant": "#e8e1db", "on-secondary-fixed": "#21143a", "secondary": "#665781", "inverse-surface": "#33302c", "error": "#ba1a1a", "background": "#fff8f3", "on-tertiary-fixed-variant": "#613d3e", "surface-bright": "#fff8f3", "on-error-container": "#93000a", "outline-variant": "#cbc4cf", "on-tertiary": "#ffffff", "on-secondary-container": "#63547e", "on-primary-fixed-variant": "#4f3e6c", "on-primary": "#ffffff", "surface-container-low": "#faf2ec", "secondary-fixed-dim": "#d1beef", "on-primary-container": "#fbf3ff", "on-background": "#1e1b17", "on-error": "#ffffff", "primary-container": "#7a6899", "on-secondary-fixed-variant": "#4e4068", "surface-container-high": "#eee7e1", "surface": "#fff8f3", "tertiary-fixed": "#ffdad9", "surface-container-highest": "#e8e1db", "tertiary": "#744e4f", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "secondary-fixed": "#ebdcff", "on-tertiary-container": "#fff3f2", "surface-dim": "#e0d9d3", "primary-fixed-dim": "#d2bdf4", "on-tertiary-fixed": "#2f1314", "primary": "#61507f", "inverse-on-surface": "#f7efe9", "inverse-primary": "#d2bdf4", "on-surface": "#1e1b17" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1.25rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-md": "1rem", "margin": "2rem" }, "fontFamily": { "body-lg": [ "Quicksand" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Quicksand" ], "headline-xl": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "body-md": [ "Quicksand" ], "headline-md": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "body-lg": [ "17px", { "lineHeight": "26px", "fontWeight": "500" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "headline-xl-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "500" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "500" } ], "headline-md": [ "22px", { "lineHeight": "28px", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-60 bg-surface-container-low z-50 flex flex-col justify-between pt-20 pb-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 px-space-md"><div class="px-space-sm mb-space-md"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Workflow Pipeline</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="upload" href="#"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">1</span><span class="material-symbols-outlined text-[20px]">upload_file</span><span class="font-label-lg text-label-lg">Upload</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="specification" href="#"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">2</span><span class="material-symbols-outlined text-[20px]">description</span><span class="font-label-lg text-label-lg">Spec</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="co-po-pso-map" href="#"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">3</span><span class="material-symbols-outlined text-[20px]">grid_on</span><span class="font-label-lg text-label-lg">CO-PO-PSO Map</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="checks" href="#"><div class="flex items-center gap-space-sm"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">4</span><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-label-lg text-label-lg">Checks</span></div><span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">5</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="workflow" href="#"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">5</span><span class="material-symbols-outlined text-[20px]">approval_delegation</span><span class="font-label-lg text-label-lg">Workflow</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl transition-all bg-primary-container text-on-primary-container font-headline-sm shadow-sm" data-path="export" href="#"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">6</span><span class="material-symbols-outlined text-[20px]">download</span><span class="font-label-lg text-label-lg">Export</span></a></nav></div><div class="px-space-md"><div class="p-space-sm rounded-xl bg-surface-container flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">Syllabus Cycle</span><span class="font-label-md text-label-md text-on-surface">AY 2024-25 (Rev 4.2)</span></div></div></aside><div class="pl-60 min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-full px-space-md flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm min-w-[220px]"><img alt="SpecForge Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VVtDoFMfqMeCak58JWa_KAmV7ToTue5d38tnWv2JvW6xRpM804qnj_Y7M3ObcI3O6D0W7YKVLUAxTUuu78nvrDkaSg2GclYaIggHPx9Z6X9rzPkjwDSlNVpUhrW9sbEz_n0VTbvxzijZotUbqKrYry9bxjQHdAjXyPXx1MSOaGtiaq3c5hf6vx68jAjiKBiL2_qUoBHii3FOq7IRPNTqpamARbs621xi5XYOpG0qlLUQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight">SpecForge</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Course Specification Assistant</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center p-1 bg-surface-container rounded-full"><button class="px-space-sm py-1 rounded-full font-label-sm text-label-sm bg-primary text-on-primary transition-all" type="button">Author</button><button class="px-space-sm py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" type="button">Reviewer</button><button class="px-space-sm py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" type="button">HOD</button></div><div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Under Review</span></div></div><div class="flex items-center gap-space-sm"><div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface"><span class="w-2 h-2 rounded-full bg-[#234B1D]"></span><span>AI: connected</span></div><button aria-label="AI Settings" class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="flex items-center gap-space-xs pl-space-xs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface leading-tight">Prof. Aris Thorne</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Dept of CS &amp; AI</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex-1 pt-16 bg-background w-full"><div class="flex flex-col w-full px-space-md py-space-md lg:px-space-xl lg:py-space-lg max-w-[1600px] mx-auto gap-space-lg">
+<!-- Breadcrumb & Document Status Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">folder_open</span>
+<span>Curriculum Workspace</span>
+</span>
+<span class="text-outline-variant font-label-sm text-label-sm">/</span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span>CS304 Spec Sheet</span>
+</span>
+<span class="text-outline-variant font-label-sm text-label-sm">/</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Stage 6: Final Export</span>
+</div>
+<!-- Quick Integrity Indicator Pill -->
+<div class="flex items-center gap-space-sm">
+<div class="inline-flex items-center gap-2 px-space-md py-1.5 rounded-full bg-[#CDEBC5] text-[#234B1D] font-label-sm text-label-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-[#234B1D] animate-pulse"></span>
+<span>All 4 Validation Audits Cleared</span>
+</div>
+<div class="hidden sm:inline-flex items-center gap-1.5 px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Rev 4.2 Compliant</span>
+</div>
+</div>
+</div>
+<!-- Main 12-Column Two-Column Split Architecture -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Parchment Academic Specification Preview (xl:col-span-8) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Paper Canvas Controls (Zoom/View Mode/Page Info) -->
+<div class="flex items-center justify-between px-space-md py-space-xs rounded-xl bg-surface-container-low shadow-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">menu_book</span>
+<span class="text-on-surface font-semibold">Official University Template Preview</span>
+<span class="text-outline-variant ml-1 font-normal">• A4 Portrait Simulation</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1 rounded-full hover:bg-surface-container text-on-surface-variant transition-colors" title="Fit to width" type="button">
+<span class="material-symbols-outlined text-[18px]">fit_screen</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-1">100%</span>
+<button class="p-1 rounded-full hover:bg-surface-container text-on-surface-variant transition-colors" title="Zoom in" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+</div>
+</div>
+<!-- High-grade Academic Paper Sheet -->
+<div class="bg-[#FFFDF8] text-on-surface rounded-xl p-space-md sm:p-space-xl lg:p-10 shadow-[0_8px_32px_rgba(84,76,52,0.06)] relative overflow-hidden flex flex-col gap-space-lg select-text" id="academic-paper-sheet">
+<!-- Subtle university watermark crest in background -->
+<div class="absolute -right-16 -top-16 opacity-[0.03] pointer-events-none select-none">
+<svg class="text-primary" fill="currentColor" height="340" viewbox="0 0 100 100" width="340">
+<circle cx="50" cy="50" fill="none" r="46" stroke="currentColor" stroke-width="4"></circle>
+<polygon points="50,15 61,38 85,38 66,54 73,78 50,62 27,78 34,54 15,38 39,38"></polygon>
+</svg>
+</div>
+<!-- University Official Title Block -->
+<div class="flex flex-col items-center text-center pb-space-md bg-surface-container-lowest/60 rounded-xl p-space-md">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-primary font-bold">Apex University of Technology &amp; Applied Sciences</span>
+</div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Department of Computer Science &amp; Engineering</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Course Specification Dossier</h2>
+<div class="flex items-center justify-center gap-space-md mt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Regulation: <strong class="text-on-surface">AY 2024–25 (Rev 4.2)</strong></span>
+<span>•</span>
+<span>Level: <strong class="text-on-surface">Undergraduate (B.Tech)</strong></span>
+<span>•</span>
+<span>Semester: <strong class="text-on-surface">IV (Spring)</strong></span>
+</div>
+</div>
+<!-- Course Banner Strip -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm p-space-md rounded-xl bg-surface-container-high/80">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-space-xs py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">Core Discipline</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Course Code</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1">CS304: Data Structures and Algorithms</h3>
+</div>
+<div class="flex items-center gap-space-md self-start md:self-auto bg-surface-container-lowest px-space-md py-space-xs rounded-xl shadow-sm">
+<div class="flex flex-col text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Credits</span>
+<span class="font-headline-sm text-headline-sm text-primary">4.0</span>
+</div>
+<div class="w-[1px] h-6 bg-outline-variant/30"></div>
+<div class="flex flex-col text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">L-T-P</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">3-1-0</span>
+</div>
+<div class="w-[1px] h-6 bg-outline-variant/30"></div>
+<div class="flex flex-col text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hours</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">45 Hrs</span>
+</div>
+</div>
+</div>
+<!-- SECTION 1: Course Overview & Pre-requisites -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Course Overview &amp; Pre-requisites</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-8 leading-relaxed">
+            This core course covers fundamental abstractions, algorithm design strategies, and concrete implementations of linear and non-linear data structures. Students master asymptotic complexity analysis, graph traversals, dynamic programming, and balanced search trees to devise computationally efficient engineering solutions.
+          </p>
+<div class="pl-8 mt-space-xs flex items-center gap-space-sm flex-wrap font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-semibold">Pre-requisites:</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface">CS101: Computer Programming in C</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface">MA201: Discrete Mathematics</span>
+</div>
+</div>
+<!-- SECTION 2: Course Outcomes Table -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">2</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Course Outcomes (CO1 – CO5)</h4>
+</div>
+<div class="pl-8 overflow-x-auto">
+<div class="min-w-[620px] rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="grid grid-cols-12 bg-surface-container-high px-space-md py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+<div class="col-span-2">Outcome ID</div>
+<div class="col-span-7">Expected Performance Outcome Description</div>
+<div class="col-span-3 text-right">Bloom’s Taxonomy</div>
+</div>
+<div class="grid grid-cols-12 px-space-md py-space-sm items-center hover:bg-surface-container-low transition-colors">
+<div class="col-span-2 font-label-md text-label-md text-primary font-bold">CO1</div>
+<div class="col-span-7 font-body-sm text-body-sm text-on-surface">Formulate and evaluate asymptotic runtime complexities (Big-O, Ω, Θ) of iterative and recursive computational logic.</div>
+<div class="col-span-3 text-right font-label-sm text-label-sm"><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">L4: Analyze</span></div>
+</div>
+<div class="grid grid-cols-12 px-space-md py-space-sm items-center bg-surface-container-low/40 hover:bg-surface-container-low transition-colors">
+<div class="col-span-2 font-label-md text-label-md text-primary font-bold">CO2</div>
+<div class="col-span-7 font-body-sm text-body-sm text-on-surface">Implement linear dynamic structures (linked lists, double-ended queues) with robust memory safeguards.</div>
+<div class="col-span-3 text-right font-label-sm text-label-sm"><span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface">L3: Apply</span></div>
+</div>
+<div class="grid grid-cols-12 px-space-md py-space-sm items-center hover:bg-surface-container-low transition-colors">
+<div class="col-span-2 font-label-md text-label-md text-primary font-bold">CO3</div>
+<div class="col-span-7 font-body-sm text-body-sm text-on-surface">Synthesize self-balancing trees (AVL, Red-Black) to achieve logarithmic access bounds for streaming key queries.</div>
+<div class="col-span-3 text-right font-label-sm text-label-sm"><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">L5: Evaluate</span></div>
+</div>
+<div class="grid grid-cols-12 px-space-md py-space-sm items-center bg-surface-container-low/40 hover:bg-surface-container-low transition-colors">
+<div class="col-span-2 font-label-md text-label-md text-primary font-bold">CO4</div>
+<div class="col-span-7 font-body-sm text-body-sm text-on-surface">Design shortest path and minimum spanning graph solutions (Dijkstra, Kruskal, Prim) for real networks.</div>
+<div class="col-span-3 text-right font-label-sm text-label-sm"><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">L4: Analyze</span></div>
+</div>
+<div class="grid grid-cols-12 px-space-md py-space-sm items-center hover:bg-surface-container-low transition-colors">
+<div class="col-span-2 font-label-md text-label-md text-primary font-bold">CO5</div>
+<div class="col-span-7 font-body-sm text-body-sm text-on-surface">Evaluate dynamic programming memoization tables versus divide-and-conquer heuristics under constraints.</div>
+<div class="col-span-3 text-right font-label-sm text-label-sm"><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">L5: Evaluate</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: CO-PO-PSO Attainment Mapping Grid -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">3</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">CO-PO-PSO Attainment Mapping Grid</h4>
+</div>
+<div class="pl-8 overflow-x-auto">
+<div class="min-w-[620px] rounded-xl bg-surface-container-lowest shadow-sm p-space-sm">
+<table class="w-full text-center font-label-sm text-label-sm">
+<thead>
+<tr class="text-on-surface-variant font-semibold">
+<th class="p-2 text-left">Outcome</th>
+<th class="p-2">PO1</th>
+<th class="p-2">PO2</th>
+<th class="p-2">PO3</th>
+<th class="p-2">PO4</th>
+<th class="p-2">PO5</th>
+<th class="p-2">PO9</th>
+<th class="p-2">PO12</th>
+<th class="p-2">PSO1</th>
+<th class="p-2">PSO2</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<tr class="hover:bg-surface-container-low">
+<td class="p-2 text-left font-bold text-primary">CO1</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2 text-outline-variant">-</td>
+<td class="p-2">2</td>
+<td class="p-2 text-outline-variant">-</td>
+<td class="p-2 text-outline-variant">-</td>
+<td class="p-2">1</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2">2</td>
+</tr>
+<tr class="hover:bg-surface-container-low">
+<td class="p-2 text-left font-bold text-primary">CO2</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2">2</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2 text-outline-variant">-</td>
+<td class="p-2">2</td>
+<td class="p-2">1</td>
+<td class="p-2 text-outline-variant">-</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2">1</td>
+</tr>
+<tr class="hover:bg-surface-container-low">
+<td class="p-2 text-left font-bold text-primary">CO3</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2">2</td>
+<td class="p-2">1</td>
+<td class="p-2 text-outline-variant">-</td>
+<td class="p-2">2</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2">2</td>
+</tr>
+<tr class="hover:bg-surface-container-low">
+<td class="p-2 text-left font-bold text-primary">CO4</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2">2</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2">2</td>
+<td class="p-2">1</td>
+<td class="p-2">2</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+</tr>
+<tr class="hover:bg-surface-container-low">
+<td class="p-2 text-left font-bold text-primary">CO5</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2">2</td>
+<td class="p-2">2</td>
+<td class="p-2 text-outline-variant">-</td>
+<td class="p-2">2</td>
+<td class="p-2 font-bold text-on-primary-fixed-variant bg-primary-fixed/40 rounded">3</td>
+<td class="p-2">2</td>
+</tr>
+</tbody>
+</table>
+<div class="mt-2 text-right text-[11px] text-on-surface-variant font-label-sm">
+                Scale: 3 = Substantial (High), 2 = Moderate (Medium), 1 = Slight (Low). Matrix passes Tier-1 NBA alignment score.
+              </div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: Unit-wise Content and Contact Hours -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">4</span>
+<div class="flex items-center justify-between flex-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Unit-wise Content &amp; Contact Hours</h4>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold">45 Hours Total</span>
+</div>
+</div>
+<div class="pl-8 grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Unit I: Foundations &amp; Linear Structures</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">9 Hours</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Asymptotic notations, recurrences, master theorem; singly/doubly linked lists, circular buffers, stack applications (parsing, evaluation).</p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Unit II: Trees &amp; Hierarchical Models</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10 Hours</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Binary search trees, rotations, balanced trees (AVL and Red-Black properties), multi-way trees (B-Trees and B+ Trees) for storage indices.</p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Unit III: Priority Queues &amp; Hashing</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">8 Hours</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Binary heaps, binomial heaps, Fibonacci heaps, universal hashing schemes, open addressing, collision handling, cuckoo hashing.</p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Unit IV: Graphs &amp; Network Algorithms</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10 Hours</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Representations, BFS, DFS, articulation points, topological sort, Dijkstra, Bellman-Ford, Floyd-Warshall, Kruskal, Prim algorithms.</p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-1 md:col-span-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Unit V: Advanced Design &amp; Intractability</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">8 Hours</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dynamic programming state equations, greedy choice properties, amortized accounting, intro to NP-completeness and polynomial reductions.</p>
+</div>
+</div>
+</div>
+<!-- SECTION 5: Assessment and Evaluation Framework -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">5</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Assessment and Evaluation Framework</h4>
+</div>
+<div class="pl-8 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Continuous Internal Evaluation (CIE)</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">60%</span>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1 mt-1">
+<li class="flex justify-between"><span>• Mid-Term Examination I &amp; II</span><strong class="text-on-surface">30%</strong></li>
+<li class="flex justify-between"><span>• Algorithmic Lab Practicals</span><strong class="text-on-surface">15%</strong></li>
+<li class="flex justify-between"><span>• Case Study &amp; Micro-Project</span><strong class="text-on-surface">10%</strong></li>
+<li class="flex justify-between"><span>• Quizzes &amp; Continuous Worksheets</span><strong class="text-on-surface">5%</strong></li>
+</ul>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Semester End Examination (SEE)</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">40%</span>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1 mt-1">
+<li class="flex justify-between"><span>• Comprehensive Theory Exam (3 Hrs)</span><strong class="text-on-surface">30%</strong></li>
+<li class="flex justify-between"><span>• External Practical Coding Viva</span><strong class="text-on-surface">10%</strong></li>
+</ul>
+<div class="mt-auto pt-space-xs flex items-center gap-1.5 text-[#234B1D] font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Cumulative total strictly verified: 100%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 6: Prescribed Textbooks & References -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">6</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Prescribed Textbooks and References</h4>
+</div>
+<div class="pl-8 flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface">
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm">
+<p><strong>[T1]</strong> Cormen, T. H., Leiserson, C. E., Rivest, R. L., &amp; Stein, C. (2022). <em>Introduction to Algorithms</em> (4th ed.). MIT Press. ISBN 978-0262046305.</p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm">
+<p><strong>[T2]</strong> Sedgewick, R., &amp; Wayne, K. (2014). <em>Algorithms</em> (4th ed.). Addison-Wesley Professional.</p>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm">
+<p><strong>[R1]</strong> Kleinberg, J., &amp; Tardos, É. (2006). <em>Algorithm Design</em>. Pearson Education.</p>
+</div>
+</div>
+</div>
+<!-- University Sign-off Block (Author, Reviewer, HOD) -->
+<div class="flex flex-col gap-space-xs pt-space-md bg-surface-container-low/70 rounded-xl p-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Institutional Governance &amp; Digital Signatures</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md mt-space-xs">
+<!-- Author Column -->
+<div class="flex flex-col p-space-sm rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Course Author / Instructor</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">Prof. Aris Thorne</span>
+<span class="font-label-sm text-label-sm text-outline">Dept. of CS &amp; AI</span>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-[#234B1D] font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">done_all</span> Signed</span>
+<span class="text-on-surface-variant text-[11px]">2025-05-12 14:22</span>
+</div>
+</div>
+<!-- Reviewer Column -->
+<div class="flex flex-col p-space-sm rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Internal Peer Reviewer</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">Dr. Elena Rostova</span>
+<span class="font-label-sm text-label-sm text-outline">Curriculum Committee</span>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-[#234B1D] font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">done_all</span> Validated</span>
+<span class="text-on-surface-variant text-[11px]">2025-05-14 09:15</span>
+</div>
+</div>
+<!-- HOD Column -->
+<div class="flex flex-col p-space-sm rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Head of Department (HOD)</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">Prof. Marcus Vance</span>
+<span class="font-label-sm text-label-sm text-outline">Dean of Academics</span>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-[#234B1D] font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">done_all</span> Ratified</span>
+<span class="text-on-surface-variant text-[11px]">2025-05-15 16:40</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Export Actions & Audit Checklist (xl:col-span-4) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg sticky top-20">
+<!-- Action Panel Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-[0_4px_16px_rgba(84,76,52,0.06)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Publish &amp; Export</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Produce verified academic artifacts</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-[#CDEBC5] text-[#234B1D] font-bold">READY</span>
+</div>
+<!-- Export Buttons Stack -->
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<!-- Primary: Download HTML -->
+<button class="group relative w-full flex items-center justify-between px-space-md py-3.5 rounded-full bg-[#C3B1E1] hover:bg-[#B3A0D2] active:scale-[0.99] text-on-primary-fixed font-headline-sm text-headline-sm transition-all shadow-sm" id="download-html-btn" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-on-primary-fixed/10 flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">html</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-lg text-label-lg font-bold text-on-primary-fixed leading-tight">Download HTML</span>
+<span class="font-label-sm text-label-sm text-on-primary-fixed/80 leading-none">Standalone web spec sheet</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-primary-fixed transition-transform group-hover:translate-x-1">download</span>
+</button>
+<!-- Secondary: Print / Save as PDF -->
+<button class="group w-full flex items-center justify-between px-space-md py-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-all shadow-sm" id="print-pdf-btn" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md font-bold text-on-surface leading-tight">Print / Save as PDF</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Formatted with page margins</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-surface">print</span>
+</button>
+<!-- Tertiary: Download output file (JSON) -->
+<button class="group w-full flex items-center justify-between px-space-md py-2.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-all shadow-sm" id="download-json-btn" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Download Data Payload</span>
+<span class="font-label-sm text-label-sm text-outline leading-none">Normalized Schema (JSON)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-surface">code</span>
+</button>
+</div>
+<div class="hidden px-space-md py-2 rounded-xl bg-[#CDEBC5] text-[#234B1D] font-label-sm text-label-sm flex items-center gap-2 transition-all" id="export-toast">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span id="toast-message">Export initiated successfully.</span>
+</div>
+</div>
+<!-- Readiness Validation Checklist Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-[0_4px_16px_rgba(84,76,52,0.06)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">fact_check</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Validation Checklist</h4>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-semibold">4 / 4 Passed</span>
+</div>
+<!-- Four Specific Check Items -->
+<div class="flex flex-col gap-space-xs">
+<!-- Check Item 1 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest/80 shadow-sm">
+<div class="w-5 h-5 rounded-full bg-[#CDEBC5] flex items-center justify-center text-[#234B1D] shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Template sections complete</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">7 of 7 required university sections populated without empty clauses.</span>
+</div>
+</div>
+<!-- Check Item 2 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest/80 shadow-sm">
+<div class="w-5 h-5 rounded-full bg-[#CDEBC5] flex items-center justify-center text-[#234B1D] shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">No leftover sample text</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Checked for `[Lorem Ipsum]`, `TODO`, and unverified placeholders.</span>
+</div>
+</div>
+<!-- Check Item 3 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest/80 shadow-sm">
+<div class="w-5 h-5 rounded-full bg-[#CDEBC5] flex items-center justify-center text-[#234B1D] shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Weights total 100%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Continuous (60%) + End-Sem (40%) mathematically validated.</span>
+</div>
+</div>
+<!-- Check Item 4 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest/80 shadow-sm">
+<div class="w-5 h-5 rounded-full bg-[#CDEBC5] flex items-center justify-center text-[#234B1D] shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">CO-PO matrix compliance</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Passed Tier-1 NBA criteria; all outcomes mapped to at least 2 POs.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Export Metadata Box -->
+<div class="p-space-md rounded-xl bg-surface-container shadow-sm flex flex-col gap-space-xs font-label-sm text-label-sm">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Export Metadata</span>
+<span class="inline-flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Tamper-evident</span>
+</span>
+</div>
+<div class="flex flex-col gap-1 text-on-surface-variant">
+<div class="flex justify-between items-center py-1 bg-surface-container-lowest/50 px-2 rounded-lg">
+<span>Schema:</span>
+<span class="text-on-surface font-semibold">AY 2024-25 (Rev 4.2)</span>
+</div>
+<div class="flex justify-between items-center py-1 bg-surface-container-lowest/50 px-2 rounded-lg">
+<span>Document Hash:</span>
+<code class="font-mono text-primary text-[11px] font-bold bg-primary-fixed/40 px-1 py-0.5 rounded">SHA256: 8f4a...92c1</code>
+</div>
+<div class="flex justify-between items-center py-1 bg-surface-container-lowest/50 px-2 rounded-lg">
+<span>Accreditation Ready:</span>
+<span class="text-[#234B1D] font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> NBA Tier-1 &amp; NAAC
+            </span>
+</div>
+</div>
+<div class="mt-space-xs pt-space-xs text-center text-outline text-[11px]">
+          Generated by SpecForge • Institutional Repository Token #SP-2025-4491
+        </div>
+</div>
+</div>
+</div>
+<!-- Inline Micro-Interactions Script -->
+<script>
+    (function() {
+      const showToast = (text) => {
+        const toast = document.getElementById('export-toast');
+        const msg = document.getElementById('toast-message');
+        if (toast && msg) {
+          msg.textContent = text;
+          toast.classList.remove('hidden');
+          setTimeout(() => {
+            toast.classList.add('hidden');
+          }, 3500);
+        }
+      };
+
+      const htmlBtn = document.getElementById('download-html-btn');
+      if (htmlBtn) {
+        htmlBtn.addEventListener('click', () => {
+          showToast('Standalone HTML syllabus dossier prepared & saved.');
+        });
+      }
+
+      const printBtn = document.getElementById('print-pdf-btn');
+      if (printBtn) {
+        printBtn.addEventListener('click', () => {
+          window.print();
+        });
+      }
+
+      const jsonBtn = document.getElementById('download-json-btn');
+      if (jsonBtn) {
+        jsonBtn.addEventListener('click', () => {
+          showToast('Normalized curriculum JSON payload downloaded.');
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

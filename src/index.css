@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-body: 'Quicksand', system-ui, -apple-system, sans-serif;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff8f3;
+    color: #1e1b17;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6, th, .font-heading {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f4ede6;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbc4cf;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7a757f;
+}
+
+/* Print Styles for PDF Export */
+@media print {
+  aside, header, nav, .no-print, button, input, .action-deck {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .print-container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 10mm 15mm !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #ffffff !important;
+  }
+
+  /* Draft watermark when not approved */
+  .watermark-draft {
+    position: relative;
+  }
+  .watermark-draft::before {
+    content: "DRAFT — NOT FOR OFFICIAL USE";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-35deg);
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba(186, 26, 26, 0.09) !important;
+    z-index: 99999;
+    pointer-events: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+}

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Quicksand:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#22123e", "on-surface-variant": "#49454e", "surface-tint": "#675686", "outline": "#7a757f", "tertiary-container": "#8f6667", "secondary-container": "#dfccfe", "primary-fixed": "#ebdcff", "on-secondary": "#ffffff", "tertiary-fixed-dim": "#ecbaba", "surface-container": "#f4ede6", "surface-variant": "#e8e1db", "on-secondary-fixed": "#21143a", "secondary": "#665781", "inverse-surface": "#33302c", "error": "#ba1a1a", "background": "#fff8f3", "on-tertiary-fixed-variant": "#613d3e", "surface-bright": "#fff8f3", "on-error-container": "#93000a", "outline-variant": "#cbc4cf", "on-tertiary": "#ffffff", "on-secondary-container": "#63547e", "on-primary-fixed-variant": "#4f3e6c", "on-primary": "#ffffff", "surface-container-low": "#faf2ec", "secondary-fixed-dim": "#d1beef", "on-primary-container": "#fbf3ff", "on-background": "#1e1b17", "on-error": "#ffffff", "primary-container": "#7a6899", "on-secondary-fixed-variant": "#4e4068", "surface-container-high": "#eee7e1", "surface": "#fff8f3", "tertiary-fixed": "#ffdad9", "surface-container-highest": "#e8e1db", "tertiary": "#744e4f", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "secondary-fixed": "#ebdcff", "on-tertiary-container": "#fff3f2", "surface-dim": "#e0d9d3", "primary-fixed-dim": "#d2bdf4", "on-tertiary-fixed": "#2f1314", "primary": "#61507f", "inverse-on-surface": "#f7efe9", "inverse-primary": "#d2bdf4", "on-surface": "#1e1b17" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1.25rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-md": "1rem", "margin": "2rem" }, "fontFamily": { "body-lg": [ "Quicksand" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Quicksand" ], "headline-xl": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "body-md": [ "Quicksand" ], "headline-md": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "body-lg": [ "17px", { "lineHeight": "26px", "fontWeight": "500" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "headline-xl-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "500" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "500" } ], "headline-md": [ "22px", { "lineHeight": "28px", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-60 bg-surface-container-low z-50 flex flex-col justify-between pt-20 pb-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 px-space-md"><div class="px-space-sm mb-space-md"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Workflow Pipeline</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="upload" href="#"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">1</span><span class="material-symbols-outlined text-[20px]">upload_file</span><span class="font-label-lg text-label-lg">Upload</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="specification" href="#"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">2</span><span class="material-symbols-outlined text-[20px]">description</span><span class="font-label-lg text-label-lg">Spec</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl transition-all bg-primary-container text-on-primary-container font-headline-sm shadow-sm" data-path="co-po-pso-map" href="#"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">3</span><span class="material-symbols-outlined text-[20px]">grid_on</span><span class="font-label-lg text-label-lg">CO-PO-PSO Map</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="checks" href="#"><div class="flex items-center gap-space-sm"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">4</span><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-label-lg text-label-lg">Checks</span></div><span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">5</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="workflow" href="#"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">5</span><span class="material-symbols-outlined text-[20px]">approval_delegation</span><span class="font-label-lg text-label-lg">Workflow</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="export" href="#"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">6</span><span class="material-symbols-outlined text-[20px]">download</span><span class="font-label-lg text-label-lg">Export</span></a></nav></div><div class="px-space-md"><div class="p-space-sm rounded-xl bg-surface-container flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">Syllabus Cycle</span><span class="font-label-md text-label-md text-on-surface">AY 2024-25 (Rev 4.2)</span></div></div></aside><div class="pl-60 min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full h-full px-space-md flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm min-w-[220px]"><img alt="SpecForge Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VVtDoFMfqMeCak58JWa_KAmV7ToTue5d38tnWv2JvW6xRpM804qnj_Y7M3ObcI3O6D0W7YKVLUAxTUuu78nvrDkaSg2GclYaIggHPx9Z6X9rzPkjwDSlNVpUhrW9sbEz_n0VTbvxzijZotUbqKrYry9bxjQHdAjXyPXx1MSOaGtiaq3c5hf6vx68jAjiKBiL2_qUoBHii3FOq7IRPNTqpamARbs621xi5XYOpG0qlLUQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight">SpecForge</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Course Specification Assistant</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center p-1 bg-surface-container rounded-full"><button class="px-space-sm py-1 rounded-full font-label-sm text-label-sm bg-primary text-on-primary transition-all" type="button">Author</button><button class="px-space-sm py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" type="button">Reviewer</button><button class="px-space-sm py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" type="button">HOD</button></div><div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Under Review</span></div></div><div class="flex items-center gap-space-sm"><div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface"><span class="w-2 h-2 rounded-full bg-[#234B1D]"></span><span>AI: connected</span></div><button aria-label="AI Settings" class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="flex items-center gap-space-xs pl-space-xs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface leading-tight">Prof. Aris Thorne</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Dept of CS &amp; AI</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex-1 pt-16 bg-background w-full"><div class="flex flex-col w-full">
+<div class="w-full px-gutter py-space-md flex flex-col gap-space-md">
+<!-- Top Action / Context Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Curriculum Alignment Matrix</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm text-primary">CS302: Data Structures &amp; Algorithms</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Course Outcome to Program Outcome Mapping (CO-PO-PSO)</h1>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">rule_folder</span>
+<span>NBA Compliance Rules</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+<span>Auto-Balance Attainment</span>
+</button>
+</div>
+</div>
+<!-- Top Controls & Legend Bar -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Correlation Level Legend -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mr-1">Mapping Scale:</span>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container shadow-xs">
+<span class="w-2 h-2 rounded-full bg-on-primary-container"></span>
+<span class="font-label-sm text-label-sm font-semibold">3 Very Strong</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-medium">2 Strong</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm font-medium">1 Moderate</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant">
+<span class="font-mono text-label-sm font-bold">—</span>
+<span class="font-label-sm text-label-sm">Blank: None</span>
+</div>
+</div>
+<!-- NBA Accreditation Rule Indicator Notice -->
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-1.5 rounded-full">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary"></span>
+</span>
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">NBA Notice:</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 cell breaking justification criteria (CO3 × PO6)</span>
+</div>
+</div>
+</div>
+<!-- Main Workspace: Split Panel (Matrix & Inspector) -->
+<div class="grid grid-cols-12 gap-space-md items-start">
+<!-- Center Matrix Area (8 Cols on xl, 12 on smaller) -->
+<div class="col-span-12 xl:col-span-8 flex flex-col gap-space-md">
+<!-- Table Canvas Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">table_chart</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Curriculum Attainment Grid</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline">Click any matrix cell to inspect justification &amp; weight</span>
+</div>
+</div>
+<!-- Table Container with Horizontal Scroll -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-center border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-3 text-left font-semibold sticky left-0 bg-surface-container z-20 min-w-[70px]">CO ID</th>
+<th class="py-space-sm px-3 text-left font-semibold min-w-[110px]">Bloom's</th>
+<th class="py-space-sm px-2 font-semibold">PO1</th>
+<th class="py-space-sm px-2 font-semibold">PO2</th>
+<th class="py-space-sm px-2 font-semibold">PO3</th>
+<th class="py-space-sm px-2 font-semibold">PO4</th>
+<th class="py-space-sm px-2 font-semibold">PO5</th>
+<th class="py-space-sm px-2 font-semibold bg-surface-container-high/60 text-tertiary font-bold">PO6</th>
+<th class="py-space-sm px-2 font-semibold">PO7</th>
+<th class="py-space-sm px-2 font-semibold">PO8</th>
+<th class="py-space-sm px-2 font-semibold">PO9</th>
+<th class="py-space-sm px-2 font-semibold">PO10</th>
+<th class="py-space-sm px-2 font-semibold">PO11</th>
+<th class="py-space-sm px-2 font-semibold bg-surface-variant/40">PSO1</th>
+<th class="py-space-sm px-2 font-semibold bg-surface-variant/40">PSO2</th>
+<th class="py-space-sm px-2 font-semibold bg-surface-variant/40">PSO3</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- CO1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-3 text-left font-headline-sm text-headline-sm text-primary font-bold sticky left-0 bg-surface-container-lowest group-hover:bg-surface-container-low z-10">CO1</td>
+<td class="py-3 px-3 text-left">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">L2 Understand</span>
+</td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold shadow-xs" type="button">3</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm font-medium" type="button">1</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1 bg-surface-container-low/40"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm font-medium" type="button">1</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm font-medium" type="button">1</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+</tr>
+<!-- CO2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-3 text-left font-headline-sm text-headline-sm text-primary font-bold sticky left-0 bg-surface-container-lowest group-hover:bg-surface-container-low z-10">CO2</td>
+<td class="py-3 px-3 text-left">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">L3 Apply</span>
+</td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm font-medium" type="button">1</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1 bg-surface-container-low/40"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm font-medium" type="button">1</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm font-medium" type="button">1</button></td>
+</tr>
+<!-- CO3 (Active Row with Inspector target PO2 and Alert at PO6) -->
+<tr class="bg-primary-fixed/20 hover:bg-primary-fixed/30 transition-colors group">
+<td class="py-3 px-3 text-left font-headline-sm text-headline-sm text-primary font-bold sticky left-0 bg-surface-container-low group-hover:bg-primary-fixed/30 z-10 flex items-center justify-between">
+<span>CO3</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</td>
+<td class="py-3 px-3 text-left">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">L4 Analyze</span>
+</td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<!-- CO3 x PO2 (Selected Active Cell) -->
+<td class="p-1 relative">
+<button class="matrix-cell w-8 h-8 rounded-lg bg-on-primary-fixed text-surface-container-lowest font-headline-sm text-headline-sm font-bold shadow-md transform scale-110" type="button">
+                      3
+                    </button>
+<span class="absolute -top-1 -right-1 flex h-2 w-2">
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+</td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<!-- CO3 x PO6 (Warning cell breaking NBA rules) -->
+<td class="p-1 bg-tertiary-fixed/30 relative">
+<button class="matrix-cell w-8 h-8 rounded-lg bg-tertiary text-on-tertiary font-headline-sm text-headline-sm font-bold shadow-sm flex items-center justify-center relative" title="Rule Warning: Justification weak for social context" type="button">
+                      1
+                      <span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-error ring-2 ring-surface-container-lowest"></span>
+</button>
+</td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm font-medium" type="button">1</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+</tr>
+<!-- CO4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-3 text-left font-headline-sm text-headline-sm text-primary font-bold sticky left-0 bg-surface-container-lowest group-hover:bg-surface-container-low z-10">CO4</td>
+<td class="py-3 px-3 text-left">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">L4 Analyze</span>
+</td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1 bg-surface-container-low/40"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm font-medium" type="button">1</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+</tr>
+<!-- CO5 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-3 text-left font-headline-sm text-headline-sm text-primary font-bold sticky left-0 bg-surface-container-lowest group-hover:bg-surface-container-low z-10">CO5</td>
+<td class="py-3 px-3 text-left">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">L5 Evaluate</span>
+</td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1 bg-surface-container-low/40"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg text-outline font-mono text-label-lg" type="button">—</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm font-semibold" type="button">2</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+<td class="p-1 bg-surface-container/50"><button class="matrix-cell w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold" type="button">3</button></td>
+</tr>
+</tbody>
+<!-- Average Summary Attainment Row -->
+<tfoot>
+<tr class="bg-surface-container-high font-label-md text-label-md text-on-surface">
+<td class="py-3 px-3 text-left font-bold sticky left-0 bg-surface-container-high z-10 text-primary">Avg. Attainment</td>
+<td class="py-3 px-3 text-left text-outline text-label-sm font-semibold">Target (≥2.0)</td>
+<td class="py-3 px-2 font-bold text-primary">2.8</td>
+<td class="py-3 px-2 font-bold text-primary">2.8</td>
+<td class="py-3 px-2 font-bold text-primary">2.4</td>
+<td class="py-3 px-2 font-bold text-primary">2.3</td>
+<td class="py-3 px-2 font-bold text-primary">2.6</td>
+<td class="py-3 px-2 font-bold text-tertiary bg-tertiary-fixed/40">1.0*</td>
+<td class="py-3 px-2 font-semibold text-outline">—</td>
+<td class="py-3 px-2 font-semibold text-on-surface">1.5</td>
+<td class="py-3 px-2 font-bold text-primary">2.0</td>
+<td class="py-3 px-2 font-semibold text-on-surface">1.8</td>
+<td class="py-3 px-2 font-bold text-primary">2.2</td>
+<td class="py-3 px-2 font-bold text-primary bg-surface-variant/70">2.8</td>
+<td class="py-3 px-2 font-bold text-primary bg-surface-variant/70">2.8</td>
+<td class="py-3 px-2 font-bold text-primary bg-surface-variant/70">2.3</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<!-- Bottom Metric & Compliance Footnote -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between text-outline gap-space-xs font-label-sm text-label-sm">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">warning</span>
+<span class="text-tertiary font-semibold">*PO6 Below Attainment Threshold (1.0 &lt; 1.5 min standard)</span>
+</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span>NBA Criterion 3.1.2 Compliant: <strong>88.2%</strong></span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>15 of 17 Active Vectors Substantiated</span>
+</div>
+</div>
+</div>
+<!-- Attainment Distribution Bento Visualizer -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1: Vector Balance -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Core Density</span>
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary">76%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Strong / Substantial</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">PO1 to PO5 account for heavy technical coverage across all CO levels.</p>
+</div>
+<!-- Card 2: Inline Attainment Sparkline -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Attainment Distribution</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Avg 2.38</span>
+</div>
+<!-- Lightweight Inline SVG Sparkline -->
+<div class="w-full h-12 flex items-end">
+<svg class="w-full h-8 overflow-visible" fill="none" viewbox="0 0 140 32" xmlns="http://www.w3.org/2000/svg">
+<path class="text-primary" d="M0,8 L12,8 L24,12 L36,14 L48,10 L60,26 L72,32 L84,20 L96,16 L108,18 L120,14 L132,8 L140,8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<circle class="fill-tertiary" cx="60" cy="26" r="3"></circle>
+<circle class="fill-primary" cx="12" cy="8" r="3"></circle>
+<circle class="fill-primary" cx="132" cy="8" r="3"></circle>
+</svg>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-1">PO1 → PO11 &amp; PSO1-3 Spread</span>
+</div>
+<!-- Card 3: Accreditation Checklist Status -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Audit Readiness</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex -space-x-1 overflow-hidden">
+<span class="inline-block h-6 w-6 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center">CO1</span>
+<span class="inline-block h-6 w-6 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center">CO2</span>
+<span class="inline-block h-6 w-6 rounded-full bg-tertiary text-on-tertiary text-[10px] font-bold flex items-center justify-center">CO3</span>
+<span class="inline-block h-6 w-6 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center">CO4</span>
+<span class="inline-block h-6 w-6 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center">CO5</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">4/5 COs Complete</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Resolve warning on CO3 before triggering external review.</p>
+</div>
+</div>
+</div>
+<!-- Right Panel: Interactive Inspector Side Panel (4 Cols on xl, 12 on smaller) -->
+<div class="col-span-12 xl:col-span-4 flex flex-col gap-space-md">
+<!-- Inspector Card Component -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col gap-space-md">
+<!-- Inspector Header -->
+<div class="flex items-start justify-between pb-space-sm border-b border-surface-container">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Target Cell Inspector</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Inspect Mapping: CO3 × PO2</h2>
+</div>
+<span class="inline-flex items-center px-2 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+<!-- PO Statement Block -->
+<div class="flex flex-col gap-1.5 p-space-sm bg-surface-container-low rounded-xl">
+<span class="font-label-sm text-label-sm font-bold text-primary">PO2: Problem Analysis</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              “Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.”
+            </p>
+</div>
+<!-- Current Selection Assessment -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Assigned Correlation Weight</span>
+<span class="font-label-md text-label-md font-bold text-primary">Level 3 (Substantial)</span>
+</div>
+<!-- Strength Button Picker (Interactive Segment) -->
+<div class="grid grid-cols-4 gap-1.5 p-1 bg-surface-container rounded-xl">
+<button class="py-2 px-1 rounded-lg text-center font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-lowest transition-all" type="button">
+<div class="font-bold">—</div>
+<div class="text-[10px] text-outline">None</div>
+</button>
+<button class="py-2 px-1 rounded-lg text-center font-label-sm text-label-sm text-on-surface hover:bg-surface-container-lowest transition-all" type="button">
+<div class="font-bold text-primary">1</div>
+<div class="text-[10px] text-outline">Moderate</div>
+</button>
+<button class="py-2 px-1 rounded-lg text-center font-label-sm text-label-sm text-on-surface hover:bg-surface-container-lowest transition-all" type="button">
+<div class="font-bold text-primary">2</div>
+<div class="text-[10px] text-outline">Strong</div>
+</button>
+<button class="py-2 px-1 rounded-lg text-center font-label-sm text-label-sm bg-primary text-on-primary shadow-sm font-bold transition-all" type="button">
+<div>3</div>
+<div class="text-[10px] text-on-primary/90">Substantial</div>
+</button>
+</div>
+</div>
+<!-- AI Justification Engine Box -->
+<div class="flex flex-col gap-space-xs p-space-md bg-surface-container-low rounded-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">psychology</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Curricular Justification</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                High (94%)
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed italic bg-surface-container-lowest p-space-sm rounded-lg mt-1">
+              “Students analyze time and space complexity of graph algorithms (Dijkstra, Bellman-Ford) and deduce optimal trade-offs for high-concurrency systems.”
+            </p>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm mt-1">
+<span>NBA Tag: First-principles Formulation</span>
+<button class="text-primary hover:underline font-semibold" type="button">Edit Rationale</button>
+</div>
+</div>
+<!-- Alert Callout for cell CO3xPO6 with auto-fix hint -->
+<div class="flex items-start gap-space-sm p-space-sm bg-tertiary-fixed/30 rounded-xl">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5">notification_important</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-tertiary">Adjacent Issue: CO3 × PO6 Warning</span>
+<p class="font-body-sm text-body-sm text-on-tertiary-fixed-variant leading-snug">
+                Mapping to PO6 (Social Context) has insufficient evidence in syllabus laboratory assignments.
+              </p>
+<button class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-bold hover:underline mt-1" type="button">
+<span>Switch to CO3 × PO6</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-2.5 px-space-md rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Save Mapping Adjustment</span>
+</button>
+<button class="w-full py-2 px-space-md rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Revert to Syllabus Default</span>
+</button>
+</div>
+</div>
+<!-- Co-Author / Peer Feedback Snippet -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold text-label-md shrink-0">
+            DR
+          </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Dr. Rebecca Chen</span>
+<span class="font-label-sm text-label-sm text-outline">2h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+              “Agreed on level 3 for PO2. Graph proofs require heavy analytical deduction.”
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
